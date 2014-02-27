@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<!-- NMML reference: https://gist.github.com/1763850 -->
+	
+	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
+	<meta title="MGE" package="com.matt.mge.MGE" version="1.0.0" company="Matt Continisio" />
+	
+	<!-- output -->
+	<app main="com.matt.mge.Main" file="MGE" path="bin" />
+	
+	<window background="#df7c0c" fps="60" />
+	<window width="800" height="480" unless="mobile" />
+	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
+	<window orientation="landscape" vsync="true" antialiasing="0" fullscreen="true" if="mobile" />
+	<window orientation="landscape" vsync="true" antialiasing="0" fullscreen="true" if="flash" />
+	
+	<!-- classpath, haxe libs -->
+	<source path="src" />
+	<haxelib name="openfl" />
+	<haxelib name="actuate" />
+	
+	<!-- assets -->
+	<icon path="assets/openfl.svg" />
+	<assets path="assets/img" rename="img" />
+	<assets path="assets/sounds" rename="sounds" />
+	<assets path="assets/data" rename="data" />
+	
+	<!-- optimize output
+	<haxeflag name="-dce full" /> -->
+	
+</project>
